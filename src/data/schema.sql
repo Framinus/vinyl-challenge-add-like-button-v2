@@ -15,7 +15,7 @@ CREATE TABLE users (
   password text not null
 );
 
-CREATE TABLE user_likes (
+CREATE TABLE userlikes (
   user_id INTEGER REFERENCES users,
   album_id INTEGER REFERENCES albums
 );

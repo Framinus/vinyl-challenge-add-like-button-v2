@@ -16,3 +16,7 @@ body {
   color:red;
   weight: bold;
 }
+
+.red-border {
+  border: 1px solid red;
+}

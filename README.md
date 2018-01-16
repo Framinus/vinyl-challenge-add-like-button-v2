@@ -64,24 +64,25 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 
 ## Steps to take to get this done:
 
-- [ ] Schema - update model to include a likes table.
-  - [ ] - table should be a join that connects users to albums?
-  - [ ] Then rerun the schema against the database.
-- [ ] Queries - need to add query functions.
-  - [ ] Adding a like to the database (takes in user_id and album_id)
-  - [ ] - how many likes has an album received? (takes in album id from req.params.)
-  - [ ] - has a particular user liked an album? yes/no. (takes in userId from req.session.)
+- [x] Schema - update model to include a likes table.
+  - [x] - table should be a join that connects users to albums?
+  - [x] Then rerun the schema against the database.
+- [x] Queries - need to add query functions.
+  - [x] Adding a like to the database (takes in user_id and album_id)
+  - [x] - how many likes has an album received? (takes in album id from req.params.)
+  - [x] - has a particular user liked an album? yes/no. (takes in userId from req.session.)
+  - [ ] - countLike - needs to return total count of album likes for album specified by params. 
 - [ ] Routes
-  - [ ] POST albums/:id/likes - checks if user has liked the album. if not, adds the like to database.
-  - [ ] GET albums/:id - add function that checks likes to page render.
+  - [x] POST albums/:id/likes - checks if user has liked the album. if not, adds the like to database.
+  - [x] GET albums/:id - add function that checks likes to page render.
 - [ ] Views
   - [ ] Add like button and counter to albums/album.ejs
 - [ ] CSS
-  - [ ] add class "red-border" to button that changes border color to red and disables click event.
+  - [x] add class "red-border" to button that changes border color to red and disables click event.
 - [ ] Front end javascript
-  - [ ] add event listener to like button click.
-  - [ ] fetch call to albums/:id/likes. no need to pass info because user can be gotten in post route, as well as album id.
-  - [ ] fetch call success will trigger adding the class of "red-border" to the button.
+  - [x] add event listener to like button click.
+  - [x] fetch call to albums/:id/likes. no need to pass info because user can be gotten in post route, as well as album id.
+  - [x] fetch call success will trigger adding the class of "red-border" to the button.
 
 
 

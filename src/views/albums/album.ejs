@@ -1,7 +1,11 @@
 <% include ../partials/header %>
 
-<h1><%= album.title %></h1>
-<em>by <%= album.artist %></em>
+<h1><%= albumAndLikes.title %></h1>
+<em>by <%= albumAndLikes.artist %></em>
 
-
+<% if (albumAndLikes.like) { %>
+<button type="submit" class="like-btn red-border" data-id="<%= albumAndLikes.id %>" data-liked="<%= albumAndLikes.like %>">Likes: <span id="counter"><%= albumAndLikes.count %></span></button>
+<% } else { %>
+  <button class="like-btn" data-id="<%= albumAndLikes.id %>" data-liked="<%= albumAndLikes.like %>">Likes: <span id="counter"><%= albumAndLikes.count %></span></button>
+  <% } %>
 <% include ../partials/footer %>
