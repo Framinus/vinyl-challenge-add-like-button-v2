@@ -18,17 +18,8 @@ router.get('/', (req, res, next) => {
 router.get('/:albumID', (req, res, next) => {
   getAlbumById(req.params.albumID)
     .then(album => {
-      //Get likes for this album
-      countLike(req.params.albumId)
-        .then(likes => {
-          res.render('albums/album', {album, likes: likes.length})
-        })
+      res.render('albums/album', {album})
     })
 })
-
-router.post('/:albumID', (req, res, next) => {
-
-})
-
 
 export default router

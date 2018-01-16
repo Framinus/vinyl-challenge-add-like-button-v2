@@ -62,39 +62,26 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 - [ ] __35:__ each album correctly displays the total number of likes from all users, and users can only like an album once
 - [ ] __10:__ if a user has liked the album they are viewing, a red border is displayed around the like button
 
+## Steps to take to get this done:
 
-**Actions I need to take to implement these specs:**
+- [ ] Schema - update model to include a likes table.
+  - [ ] - table should be a join that connects users to albums?
+  - [ ] Then rerun the schema against the database.
+- [ ] Queries - need to add query functions.
+  - [ ] - how many likes has an album received? (takes in album id from req.params.)
+  - [ ] - has a particular user liked an album? yes/no. (takes in userId from req.session.)
+- [ ] Routes
+  - [ ] POST albums/:id/likes - checks if user has liked the album. if not, adds the like to database.
+  - [ ] GET albums/:id - add function that checks likes to page render.
+- [ ] Views
+  - [ ] Add like button and counter to albums/album.ejs
+- [ ] CSS
+  - [ ] add class "red-border" to button that changes border color to red and disables click event.
+- [ ] Front end javascript
+  - [ ] add event listener to like button click.
+  - [ ] fetch call to albums/:id/likes. no need to pass info because user can be gotten in post route, as well as album id.
+  - [ ] fetch call success will trigger adding the class of "red-border" to the button. 
 
-- [ ] Update schema with way to represent likes
-  - many-many means join table between users and albums_id
-- [ ] Write db query to get total number of likes per album
-- [ ] Ensure auth flow is working and user is being set on session
-- [ ] Create routes
-  - [ ] POST /api/likes/:albumId  - this handles adding a like to an album by a particular user
-- [ ] Update the route for individual album page so it sends the number of likes
-  - [ ] Send along whether the user has already liked the album
-- [ ] VIEW:
-  - [ ] Add a like button
-  - [ ] Add a like count
-  - [ ] Add some client-side JS to post to the api when Like is clicked, add red border, and to increment the counter
-  - [ ] If user has already liked album, render red border
-
-
-
-- [ ] Schema representation of 'likes'
-- [ ] Database queries to interact with likes
-  - [ ] query to see if liked
-  - [ ] query to create like
-- [ ] Server side js to actuate db queries
-- [ ] Route for handling like creation
-- [ ] Add fetch call to like creation
-- [ ] user sessions
-- [ ] loggin' in
-- [ ] Authenticate like routes
-- [ ] Add like button to album page
-- [ ] css for like button
-- [ ] check database to see if user_id is in table for specific album
-- [ ]
 
 
 
