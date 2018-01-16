@@ -1,5 +1,6 @@
 drop table if exists albums CASCADE;
 drop table if exists users CASCADE;
+drop table if exists user_likes CASCADE;
 
 CREATE TABLE albums (
   id SERIAL primary key,
@@ -12,4 +13,9 @@ CREATE TABLE users (
   name text not null,
   email text not null,
   password text not null
+);
+
+CREATE TABLE user_likes (
+  user_id INTEGER REFERENCES users,
+  album_id INTEGER REFERENCES albums
 );
