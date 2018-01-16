@@ -1,5 +1,6 @@
 import db from '../db'
 
 export default function countLike(albumId) {
-  // create function here
+  return db.any(`SELECT * FROM user_likes
+    WHERE album_id =$1`, albumId)
 }

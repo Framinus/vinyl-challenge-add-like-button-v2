@@ -68,6 +68,7 @@ Each requirement is assigned a point value. A fully complete requirement will ea
   - [ ] - table should be a join that connects users to albums?
   - [ ] Then rerun the schema against the database.
 - [ ] Queries - need to add query functions.
+  - [ ] Adding a like to the database (takes in user_id and album_id)
   - [ ] - how many likes has an album received? (takes in album id from req.params.)
   - [ ] - has a particular user liked an album? yes/no. (takes in userId from req.session.)
 - [ ] Routes
@@ -80,7 +81,7 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 - [ ] Front end javascript
   - [ ] add event listener to like button click.
   - [ ] fetch call to albums/:id/likes. no need to pass info because user can be gotten in post route, as well as album id.
-  - [ ] fetch call success will trigger adding the class of "red-border" to the button. 
+  - [ ] fetch call success will trigger adding the class of "red-border" to the button.
 
 
 
