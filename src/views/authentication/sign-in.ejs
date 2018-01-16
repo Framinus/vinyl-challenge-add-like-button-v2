@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+<div />
+<div class="center">
+  <form action="/sign-in" method="POST">
+    E-Mail<input name="email"></input><br>
+    Password<input name="password" type="password"></input><br>
+    <% if (error) { %>
+      <span class='error'> <%= error %> </span><br>
+    <% } %>
+    <button type='submit'>Submit</button>
+  </form>
+</div>
+<div />
+
+
+
+<% include ../partials/footer %>
