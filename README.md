@@ -56,11 +56,17 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 ## Like Button - Example spec (2017-12-20)
 
 
-- [ ] __25:__ user can click a like button on an album, increasing the total displayed without a page refresh
-- [ ] __15:__ number of likes persists between page refreshes and server restarts
-- [ ] __15:__ users are only able to like an album when logged in
-- [ ] __35:__ each album correctly displays the total number of likes from all users, and users can only like an album once
-- [ ] __10:__ if a user has liked the album they are viewing, a red border is displayed around the like button
+- [x] __25:__ user can click a like button on an album, increasing the total displayed without a page refresh
+- [x] __15:__ number of likes persists between page refreshes and server restarts
+- [x] __15:__ users are only able to like an album when logged in
+- [x] __35:__ each album correctly displays the total number of likes from all users, and users can only like an album once
+- [x] __10:__ if a user has liked the album they are viewing, a red border is displayed around the like button
+
+## Notes from this attempt
+
+- Write out exactly what variables need to be passed to the ejs template, and plan which query functions are going to return that data, and how. I got caught up in which functions were returning what data, and specifically whether they were returning a single row. when querying for a COUNT, you actually return a single row.
+- The model to controller to view strategy started off strong, but I had to backtrack. Get the early parts right so that it is easy by the time the view rolls around.
+- fetch call - still had trouble with formatting url correctly to match route. more work on route abstraction is needed.
 
 ## Steps to take to get this done:
 

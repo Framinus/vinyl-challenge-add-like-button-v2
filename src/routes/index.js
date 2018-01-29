@@ -4,6 +4,7 @@ import albums from './albums'
 import users from './users'
 import authentication from './authentication'
 import {addLike} from '../actions'
+
 const routes = express.Router()
 
 routes.get('/', (req, res) => res.redirect('/albums'))

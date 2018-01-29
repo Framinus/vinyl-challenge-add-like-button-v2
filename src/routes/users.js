@@ -8,7 +8,9 @@ const router = express.Router()
 
 router.get('/:id', (req, res, next) => {
   getUserById()
-    .then(albums => res.render('albums/index', {albums}))
+    .then((albums) => {
+      res.render('albums/index', {albums})
+    })
     .catch(next)
 })
 
