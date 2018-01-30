@@ -81,8 +81,11 @@ Each requirement is assigned a point value. A fully complete requirement will ea
 - css
   - add a red border class.
 
+## Post-attempt notes:
 
-
+- This was MUCH faster. I credit both yesterday's practice run and taking the time to write out a step by step plan above. Those five minutes saved me an hour!
+- I did forget for a moment to put an ejs variable in the counter span that took the result of the countLike function and displayed it. Luckily I was able to debug that quickly.
+- Remember to use (RETURNING) when doing a SQL insert query. Again, a very quick thing to debug, but i have forgotten it several times.
 
 ## Sign Up
 
