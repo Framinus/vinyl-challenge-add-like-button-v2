@@ -13,6 +13,10 @@ body {
   margin-top: calc(50vh - 100px);
 }
 .error {
-  color:red;
+  color: red;
   weight: bold;
+}
+
+.red-border {
+  border: 2px solid red;
 }

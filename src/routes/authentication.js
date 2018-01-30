@@ -42,7 +42,7 @@ router.post('/sign-in', (req, res) => {
       if (user) {
         console.log("SIGNIN RESULT::", user)
         req.session.user = user[0]
-        res.redirect('/info')
+        res.redirect('/')
       } else {
         res.render('authentication/sign-in', {error: 'Incorrect username or password'})
       }

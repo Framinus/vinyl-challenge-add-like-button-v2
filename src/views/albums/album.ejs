@@ -3,5 +3,12 @@
 <h1><%= album.title %></h1>
 <em>by <%= album.artist %></em>
 
+<% if (likedByUser) { %>
+<button id="like-btn" class="red-border" data-id="<%= album.id %>" disabled>Like This Album!</button>
+<% } else { %>
+<button id="like-btn" data-id="<%= album.id %>">Like This Album!</button>
+<% } %>
+<div>Like Count: <span id="like-counter"><%= likes.count %></span></div>
+
 
 <% include ../partials/footer %>

@@ -1,7 +1,28 @@
 console.log('hello from the browser JavaScript')
 
-const likebtn = () => document.querySelector('#likebtn')
+const likeBtn = document.querySelector('#like-btn')
+const likeCounter = document.querySelector('#like-counter')
 
-// TODO: finish implementing click handler for the like button, which includes executing a fetch request to the server and updating the counter via dom manipulation
-//
-// likebtn.addEventListener('click', () => )
+let counter = Number(likeCounter.innerHTML)
+
+const addLike = (event) => {
+  event.preventDefault()
+  const albumId = likeBtn.getAttribute("data-id")
+  fetch(`/albums/${albumId}/like`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+  })
+    .then((addedLike) => {
+      if (addedLike) {
+        likeBtn.classList.add('red-border')
+        likeBtn.disabled = true
+        counter += 1
+        likeCounter.innerHTML = counter
+      }
+    })
+}
+
+likeBtn.addEventListener('click', addLike)
