@@ -32,7 +32,7 @@ router.post('/sign-up', (req, res) => {
 })
 
 router.get('/sign-in', (req, res) => {
-  res.render('authentication/sign-in', {error: null})
+  res.render('authentication/sign-in', {redirectUrl: req.query.REDIRECT_URL, error: null})
 })
 
 router.post('/sign-in', (req, res) => {
@@ -42,7 +42,8 @@ router.post('/sign-in', (req, res) => {
       if (user) {
         console.log("SIGNIN RESULT::", user)
         req.session.user = user[0]
-        res.redirect('/info')
+        const redirectUrl = req.query.REDIRECT_URL || '/'
+        res.redirect(redirectUrl)
       } else {
         res.render('authentication/sign-in', {error: 'Incorrect username or password'})
       }
